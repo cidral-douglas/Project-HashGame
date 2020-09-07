@@ -1,0 +1,36 @@
+Jogo da Velha
+-------------
+
+-Fazer o Tabuleiro;
+-Fazer as 2 peças;
+-Criar as variáveis iniciais:
+
+--Variável board será um array de tamanho 9, ele será inicialmente vazio.
+Entrará nele as opções 'o' ou 'x' que são os símbolos;
+--Variável symbols será um array de tamanho 2 que receberá os dois símbolos;
+--Variável playerTime que iniciará com o valor 0 e a cada jogada vai intercalar entre 0 e 1;
+
+-Adicionar um addEventListener para todos os squares. Esse evento será o 'click'.
+Para isso primeiro devemos garantir que o jogo foi carregado utilizando o DOMContentLoaded;
+
+-handleMove(position).Criar uma função que faça board receber o symbols a cada playerTime.
+board[0] = symbols[0]  =>>  board[1] = symbols[1]  =>>  board[2] = symbols[0]
+
+-handleClick(event).O valor que entrara em board não é uniforme, é o id do square clicado. 
+Portanto, devemos criar uma função que quando o square for clicado uma variável receba seu id.
+Esse id vai ser passado como argumento (position) para a função handleMove(position);
+
+-A cada novo click devemos ter um updateScreen() para mudar na tela o estado vazio para o estado da jogado;
+-A função updateScreen() deve receber o id clicado e fazer um innerHTML do symbol no square;
+
+-Criar um variável booleana chamada gameOver e adcionar um if para ela no handleMove();
+-Criar um função que analisa se tem um vencedor. isWin();
+
+-isWin(). Criar um array global winStates. Fazer uma varredura dentro desse array.
+Teremos uma variável que receberá a sequência ganhadora e 3 variáveis que receberão as posições.
+Por fim, fazer um if que analiza se la no board tem 3 squares que são iguais as posições vencedoras.
+A cada nova jogada o jogo deve analiazar se alguma das alternativas de vitória foram alcançadas.
+Retornar true para gameOver.
+
+
+
